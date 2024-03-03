@@ -1,11 +1,15 @@
-<a class="item">
-ChatRoom
-</a>
-<a class="item">
-Messages
-</a>
+
+<div class="item">
+  <%= link_to "Chat Room", root_path, class: "left" %>
+</div>
+<div class="item">
+  <%= link_to "Messages", root_path, class: "left" %>
+</div>
+
 <div class="right item">
-    <div class="item">Log In</div>
-    <div class="item">Log Out</div>
-    <div class="item">Sign Up</div>
+  <div>
+    <%= link_to "log In", login_path, class: "item" %>
+  </div>
+  <div class="item">Log Out</div>
+  <div class="item">Sign Up</div>
 </div>

@@ -1,15 +1,27 @@
-
-<div class="item">
-  <%= link_to "Chat Room", root_path, class: "left" %>
-</div>
-<div class="item">
-  <%= link_to "Messages", root_path, class: "left" %>
-</div>
-
-<div class="right item">
-  <div>
-    <%= link_to "log In", login_path, class: "item" %>
+<%= link_to "Chatroom", root_path, class: "item" %>
+<a class="item">
+Messages
+</a>
+<div class="right menu">
+<%= link_to "Logout", logout_path, data: {turbo_method: :delete}, class: "item" %>
+  <div class="ui dropdown item">
+    Account <i class="dropdown icon"></i>
+    <div class="menu">
+    <% if logged_in? %>
+        <%= link_to "Logout", logout_path, data: {turbo_method: :delete}, class: "item" %>
+      <% else %>
+        <%= link_to "Log in", login_path, class: "item" %>
+      <% end %>
+    </div>
   </div>
-  <div class="item">Log Out</div>
-  <div class="item">Sign Up</div>
+
+  <div class="item">
+    <%= link_to "Log in", login_path, class: "ui primary button" %>
+  </div>
+  
+  <% if !logged_in? %>
+    <div class="item">
+      <%= link_to "Log in", login_path, class: "ui primary button" %>
+    </div>
+  <% end %>
 </div>

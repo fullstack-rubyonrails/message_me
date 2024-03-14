@@ -3,12 +3,12 @@
 Messages
 </a>
 <div class="right menu">
-<%= link_to "Logout", logout_path, data: {turbo_method: :delete}, class: "item" %>
+<%= link_to "Logout", logout_path, class: "item", method: :delete %>
   <div class="ui dropdown item">
     Account <i class="dropdown icon"></i>
     <div class="menu">
     <% if logged_in? %>
-        <%= link_to "Logout", logout_path, data: {turbo_method: :delete}, class: "item" %>
+        <%= link_to "Logout", logout_path, class: "item", method: :delete %>
       <% else %>
         <%= link_to "Log in", login_path, class: "item" %>
       <% end %>

@@ -7,6 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(username: "Ahmed", password_digest: "password")
 User.create(username: "Siddiqui", password_digest: "password")
-User.create(username: "Mehreen", password_digest: "password")
-User.create(username: "Zainab", password_digest: "password")
-User.create(username: "Asadullah", password_digest: "password")

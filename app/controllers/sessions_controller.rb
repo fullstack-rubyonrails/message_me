@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :logged_in_redirect, olny: [:new, :create]
+  before_action :logged_in_redirect, only: [:new, :create]
 
   def new
     
@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+  
   def destroy
     session[:user_id] = nil
     flash[:success] = "You have successfully logged out"

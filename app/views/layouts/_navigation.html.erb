@@ -3,25 +3,25 @@
 Messages
 </a>
 <div class="right menu">
-<%= link_to "Logout", logout_path, class: "item", method: :delete %>
+<%= link_to "LogOut", logout_path, class: "item", method: :delete %>
   <div class="ui dropdown item">
     Account <i class="dropdown icon"></i>
     <div class="menu">
     <% if logged_in? %>
-        <%= link_to "Logout", logout_path, class: "item", method: :delete %>
+        <%= link_to "LogOut", logout_path, class: "item", method: :delete %>
       <% else %>
-        <%= link_to "Log in", login_path, class: "item" %>
+        <%= link_to "LogIn", login_path, class: "item" %>
       <% end %>
     </div>
   </div>
 
   <div class="item">
-    <%= link_to "Log in", login_path, class: "ui primary button" %>
+    <%= link_to "LogIn", login_path, class: "ui primary button" %>
   </div>
   
   <% if !logged_in? %>
     <div class="item">
-      <%= link_to "Log in", login_path, class: "ui primary button" %>
+      <%= link_to "LogIn", login_path, class: "ui primary button" %>
     </div>
   <% end %>
 </div>

@@ -10,7 +10,9 @@ module MessageMe
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-
+    # Added by Hassaan
+    # config.action_controller.default_url_options to { host: 'localhost', port: 3001 }
+    # End Added by Hassaan
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

@@ -16,14 +16,14 @@ Rails.application.configure do
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     # Hassaan from true to false
-    config.action_controller.perform_caching = true
+    # config.action_controller.perform_caching = true
     # End Hassaan
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      # Hassaan made it 1 from 2
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+    # Hassaan made it 1 from 2
+    'Cache-Control' => "public, max-age=#{2.days.to_i}"
     # End Hassaan made it 1 from 2
     }
   else

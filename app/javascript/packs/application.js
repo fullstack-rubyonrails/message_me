@@ -10,13 +10,43 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require jquery
-//= require activestorage
-//= require turbolinks
-//= require semantic-ui
+// import '@doabit/semantic-ui-sass'
+import $ from 'jquery'
+import 'semantic-ui-css/semantic.min.css'
+import 'semantic-ui-css/semantic.min.js'
+require("@rails/ujs")
+require("jquery")
+require("turbolinks").start()
+// Loads all Semantic javascripts
+require('semantic-ui')
+//= require semantic-ui/dropdown
+
+const $ = require('jquery');
+require('semantic-ui-css/semantic.min.css');
+require('semantic-ui-css/semantic.min.js');
+require("@rails/activestorage").start()
+require("channels")
 //= require_tree .
 
+// require rails-ujs
+// require jquery
+// require activestorage
+// require turbolinks
+  
+
+
+
+
+$(function() {
+  $('.ui.dropdown').dropdown();
+});
+
+
+$(document).on('turbolinks:load', function() {
+  // $('.ui.dropdown').dropdown();
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
 scroll_bottom = function() {
   if ($('#messages').length > 0) {
     $('#messages').scrollTop($('#messages')[0].scrollHeight);
@@ -32,11 +62,6 @@ submit_message = function() {
   });
 };
 
-$(document).on('turbolinks:load', function() {
-  $('.ui.dropdown').dropdown();
-  $('.message .close').on('click', function() {
-    $(this).closest('.message').transition('fade');
-  });
   submit_message();
   scroll_bottom();
 })

@@ -11,19 +11,14 @@
 // about supported directives.
 //
 // import '@doabit/semantic-ui-sass'
-import $ from 'jquery'
-import 'semantic-ui-css/semantic.min.css'
-import 'semantic-ui-css/semantic.min.js'
-require("@rails/ujs")
+
+require("@rails/ujs").start
 require("jquery")
 require("turbolinks").start()
 // Loads all Semantic javascripts
-require('semantic-ui')
+require("semantic-ui")
 //= require semantic-ui/dropdown
 
-const $ = require('jquery');
-require('semantic-ui-css/semantic.min.css');
-require('semantic-ui-css/semantic.min.js');
 require("@rails/activestorage").start()
 require("channels")
 //= require_tree .
@@ -33,7 +28,9 @@ require("channels")
 // require activestorage
 // require turbolinks
   
-
+import $ from 'jquery'
+import 'semantic-ui-css/semantic.min.css'
+import 'semantic-ui-css/semantic.min.js'
 
 
 
